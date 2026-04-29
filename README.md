@@ -9,9 +9,9 @@ Este repositorio contiene la documentación técnica y el código fuente corresp
 ## Descripción Técnica
 La arquitectura del sistema se basa en la integración de tres componentes principales:
 
-1. Transmisión de Audio: Configuración de flujo de datos mediante el software de código abierto 'butt' (Broadcast Using This Tool) y el servidor de streaming Caster.fm.
+1. Transmisión de Audio -emisión en vivo: Configuración de flujo de datos mediante el software de código abierto 'butt' (Broadcast Using This Tool) y el servidor de streaming Caster.fm.
 2. Gestión de Contenido: Implementación de servicios de podcast a través de la plataforma SoundCloud.
-3. Interfaz de Usuario: Diseño y despliegue en la plataforma Blogger, utilizando scripts personalizados en HTML y CSS para la integración de reproductores multimedia.
+3. Interfaz de Usuario-plataforma web: Diseño y despliegue en la plataforma Blogger, utilizando scripts personalizados en HTML y CSS para la integración de reproductores multimedia.
 
 ## Estructura del Repositorio
 * codigo-reproductor-blogger.html: Contiene el script de integración del reproductor en vivo y la estructura del blog.
