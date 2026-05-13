@@ -1,0 +1,92 @@
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<div style="
+  max-width: 420px;
+  margin: 20px auto;
+  background: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  font-family: 'Work Sans', sans-serif;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  /* Borde externo principal en Gris Claro SENA */
+  border: 2px solid #F6F6F6;
+">
+
+  <div style="
+    background: #39A900; 
+    padding: 22px 15px; 
+    text-align: center;
+    /* Borde inferior en Verde SENA para separación sutil */
+    border-bottom: 3px solid #39A900;
+  ">
+    <h2 style="margin: 0; color: #FFFFFF; font-size: 20px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;">
+      🎧 RADIO WEB SENA
+    </h2>
+    <p style="margin: 4px 0 0; color: #FFFFFF; font-size: 13px; font-weight: 400; opacity: 0.95;">
+      Centro de Materiales y Ensayos
+    </p>
+  </div>
+
+  <div style="padding: 25px 20px; text-align: center; background: #FFFFFF;">
+    
+    <div style="
+      background: #F6F6F6; /* Fondo Gris Claro SENA */
+      padding: 18px; 
+      border-radius: 12px; 
+      /* Borde sutil pero visible para definir el área */
+      border: 1px solid #F6F6F6;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.02);
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    ">
+      
+      <div data-type="newStreamPlayer" 
+           data-publicToken="1b905143-d138-4b43-85a6-e3eef6902172" 
+           data-theme="light" 
+           data-color="39A900" 
+           data-channelId="" 
+           data-rendered="false" 
+           class="cstrEmbed"
+           style="margin: auto;">
+        
+        <a href="https://www.caster.fm" style="font-size: 11px; color: #999; text-decoration: none;">Shoutcast Hosting</a> | 
+        <a href="https://www.caster.fm" style="font-size: 11px; color: #999; text-decoration: none;">Stream Hosting</a> | 
+        <a href="https://www.caster.fm" style="font-size: 11px; color: #999; text-decoration: none;">Radio Server Hosting</a>
+      
+      </div>
+      
+      <script src="https://cdn.cloud.caster.fm/widgets/embed.js"></script>
+
+    </div>
+
+    <div style="margin-top: 22px;">
+      <div style="
+        display: inline-flex;
+        align-items: center;
+        background: #FFFFFF;
+        border: 2px solid #39A900; /* Borde Verde SENA */
+        padding: 6px 18px;
+        border-radius: 25px;
+      ">
+        <span style="color: #39A900; font-weight: 700; font-size: 11px; letter-spacing: 0.8px; text-transform: uppercase;">
+          <span style="color: #ff0000; margin-right: 4px; font-size: 14px;">•</span> EN VIVO
+        </span>
+      </div>
+    </div>
+
+    <p style="margin-top: 18px; color: #00000; font-size: 12px; line-height: 1.6; font-weight: 400;">
+      Escucha nuestra señal técnica y académica en directo. <br>
+      <strong style="color: #00304D; font-weight: 600;">SENA: Tecnología y Conocimiento.</strong>
+    </p>
+  </div>
+
+  <div style="
+    background: #00304D; 
+    height: 10px;
+    /* Borde superior muy sutil para separación */
+    border-top: 1px solid rgba(255,255,255,0.1);
+  "></div>
+
+</div>

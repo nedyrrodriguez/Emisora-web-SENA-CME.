@@ -1,0 +1,182 @@
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --verde-sena: #39A900; 
+    --verde-oscuro: #007832;
+    --azul-oscuro: #00304D;
+    --gris-claro: #F6F6F6;
+    --blanco: #FFFFFF;
+  }
+
+  /* LIMPIEZA DE ELEMENTOS EXTERNOS */
+  .profile-wrapper, .author-profile, .sidebar, #sidebartop, #sidebarbottom, .widget.Profile {
+    display: none !important;
+  }
+
+  .main-inner, .content-inner, .post-body {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .contenedor-inicio {
+    font-family: 'Work Sans', sans-serif;
+    max-width: 1100px;
+    margin: 0 auto;
+    color: #333;
+    padding: 20px;
+  }
+
+  /* BANNER PRINCIPAL */
+  .hero-banner {
+    background: linear-gradient(135deg, var(--verde-sena), var(--verde-oscuro));
+    border-radius: 15px;
+    padding: 50px 20px;
+    text-align: center;
+    color: white !important;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  }
+
+  /* Título para PC */
+  .hero-banner h1 { 
+    font-size: 3.5rem !important; 
+    font-weight: 700 !important; 
+    margin: 0 !important; 
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important; 
+    line-height: 1.1 !important; 
+    color: white !important;
+  }
+
+  .hero-banner p {
+    font-size: 1.3rem !important;
+    opacity: 0.9;
+    margin-top: 15px !important;
+    font-weight: 300 !important;
+  }
+
+  /* AJUSTE PARA CELULARES */
+  @media screen and (max-width: 768px) {
+    .hero-banner {
+      padding: 35px 15px !important;
+    }
+    .hero-banner h1 {
+      font-size: 1.8rem !important; 
+      line-height: 1.3 !important; 
+      letter-spacing: 0px !important;
+    }
+    .hero-banner p {
+      font-size: 1rem !important;
+      margin-top: 10px !important;
+    }
+  }
+
+  /* TARJETAS */
+  .grid-dashboard {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .card-premium {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: 0.3s;
+    border-bottom: 4px solid var(--verde-sena);
+  }
+
+  .card-premium:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08); 
+  }
+
+  .media-container {
+    margin-top: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .video-responsive {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .video-responsive object, .video-responsive iframe {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+  }
+
+  .info-bar {
+    background: var(--gris-claro);
+    border-left: 6px solid var(--azul-oscuro);
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 8px;
+  }
+
+  .tag-hoy {
+    background: var(--verde-sena);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+</style>
+
+<div class="contenedor-inicio">
+  
+  <div class="hero-banner">
+    <h1>Radio Web CME</h1>
+    <p>La señal del Centro de Materiales y Ensayos</p>
+  </div>
+
+  <div class="grid-dashboard">
+    <!-- Tarjeta Noticias -->
+    <div class="card-premium">
+      <span style="font-size: 45px;">🎙️</span>
+      <h3 style="color: var(--azul-oscuro); margin: 15px 0 10px 0; font-weight: 700;">ULTIMAS NOTICIAS</h3>
+      <p style="font-size: 14px; color: #000000;">Lanzamiento oficial de la emisora. Iniciativa del Centro de Materiales y Ensayos.</p>
+      <div class="media-container">
+        <div class="video-responsive">
+          <object class="BLOG_video_class" contentid="d1e7f8181d81616a" id="BLOG_video-d1e7f8181d81616a"></object>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta SoundCloud -->
+    <div class="card-premium">
+      <span style="font-size: 45px;">🎧</span>
+      <h3 style="color: var(--azul-oscuro); margin: 15px 0 10px 0; font-weight: 700;">CONTENIDO DIGITAL</h3>
+      <p style="font-size: 14px; color: #000000;">Escucha nuestras pruebas de audio y contenido técnico.</p>
+      <div class="media-container" style="display: flex; align-items: center;">
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2306801006&color=%2339a900&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-bar">
+    <span class="tag-hoy">HOY EN RADIO CME</span>
+    <p style="margin: 5px 0 0 0; font-size: 14px; line-height: 1.6; color: var(--azul-oscuro);">
+      • <b>Investigación Aplicada:</b> Avances en polímeros y ensayos.<br>
+      • <b>Cultura Institucional:</b> Talento SENA en el CME.
+    </p>
+  </div>
+
+  <div style="margin-top: 50px; text-align: center; padding: 20px; border-top: 1px solid #eee;">
+    <p style="font-size: 11px; color: #AAA; letter-spacing: 2px; font-weight: 600;">CENTRO DE MATERIALES Y ENSAYOS • CONOCIMIENTO PARA TODOS LOS COLOMBIANOS</p>
+    <div style="background: var(--verde-sena); height: 5px; width: 60px; margin: 10px auto; border-radius: 10px;"></div>
+  </div>
+
+</div>
