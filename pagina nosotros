@@ -1,0 +1,162 @@
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  
+  .nosotros-cme {
+    --verde-sena: #39A900;
+    --azul-oscuro: #00304D;
+    --gris-fondo: #F6F6F6;
+    font-family: 'Work Sans', sans-serif;
+    color: #444;
+  }
+
+  .nosotros-cme .container-identidad { max-width: 1100px; margin: auto; padding: 20px; }
+  
+  .nosotros-cme h1 { 
+    text-align: center; 
+    color: var(--azul-oscuro) !important; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    margin-bottom: 40px; 
+    border-bottom: 4px solid var(--verde-sena); 
+    padding-bottom: 10px;
+    font-size: 28px;
+  }
+
+  .nosotros-cme .grid-identidad { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    gap: 15px; 
+    margin-bottom: 30px; 
+  }
+
+  .nosotros-cme .card-nosotros { 
+    background: var(--gris-fondo); 
+    border-radius: 12px; 
+    overflow: hidden; 
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.05); 
+    transition: 0.3s; 
+    text-align: center; 
+    border: 1px solid #eee;
+  }
+
+  .nosotros-cme .card-nosotros:hover { transform: translateY(-5px); border-color: var(--verde-sena); }
+  .nosotros-cme .card-content { padding: 15px; }
+  .nosotros-cme .card-nosotros h3 { font-size: 0.9rem; color: var(--azul-oscuro); margin-bottom: 10px; font-weight: 700; border: none; }
+
+  .nosotros-cme .boton-id { 
+    background: var(--verde-sena); 
+    color: white !important; 
+    padding: 8px 15px; 
+    border-radius: 50px; 
+    border: none; 
+    font-weight: 600; 
+    cursor: pointer; 
+    font-size: 0.75rem;
+  }
+
+  .nosotros-cme .seccion-id { 
+    display: none; 
+    margin-top: 30px; 
+    background: #fff; 
+    padding: 40px; 
+    border-radius: 15px; 
+    border: 1px solid #eee; 
+    border-left: 10px solid var(--verde-sena); 
+    animation: fadeID 0.5s ease; 
+    scroll-margin-top: 80px;
+  }
+
+  .nosotros-cme .activa-id { display: block !important; }
+  
+  .nosotros-cme h2 { color: var(--azul-oscuro); font-weight: 700; border-bottom: 2px solid var(--verde-sena); display: inline-block; margin-bottom: 20px; font-size: 22px; }
+  .nosotros-cme .texto-pro h3 { color: var(--verde-sena); font-size: 1.2rem; margin-top: 25px; border:none; }
+  
+  .nosotros-cme .texto-pro { line-height: 1.8; color: #444; text-align: justify; font-size: 15px; }
+  .nosotros-cme .highlight-box { background: #f0f7f0; padding: 20px; border-radius: 10px; border-left: 5px solid var(--verde-sena); margin: 20px 0; }
+  
+  @keyframes fadeID { from {opacity: 0; transform: translateY(10px);} to {opacity: 1; transform: translateY(0);} }
+</style>
+
+<div class="nosotros-cme">
+  <div class="container-identidad">
+    <h1>Identidad y Proyecto Radio Web</h1>
+
+    <div class="grid-identidad">
+      <div class="card-nosotros"><div class="card-content"><h3>SENA Institucional</h3><button class="boton-id" onclick="mostrarID('sena')">Misión/Visión</button></div></div>
+      <div class="card-nosotros"><div class="card-content"><h3>Centro CME</h3><button class="boton-id" onclick="mostrarID('cme')">Visión 2030</button></div></div>
+      <div class="card-nosotros"><div class="card-content"><h3>Historia</h3><button class="boton-id" onclick="mostrarID('historia')">Origen</button></div></div>
+      <div class="card-nosotros"><div class="card-content"><h3>El Proyecto</h3><button class="boton-id" onclick="mostrarID('proyecto')">Fundamentación</button></div></div>
+      <div class="card-nosotros"><div class="card-content"><h3>Objetivos</h3><button class="boton-id" onclick="mostrarID('objetivos')">Metas</button></div></div>
+    </div>
+
+    <div id="sena" class="seccion-id">
+      <h2>Misión y Visión SENA</h2>
+      <div class="texto-pro">
+        <h3>Misión</h3>
+        <p>El SENA está encargado de cumplir la función que le corresponde al Estado de invertir en el desarrollo social y técnico de los trabajadores colombianos, ofreciendo y ejecutando la <strong>formación profesional integral</strong>, para la incorporación y el desarrollo de las personas en actividades productivas que contribuyan al desarrollo social, económico y tecnológico del país.</p>
+        <h3>Visión</h3>
+        <p>El SENA se consolidará como una entidad referente de formación integral para el trabajo, por su aporte a la empleabilidad, el emprendimiento y la equidad, que atiende con pertinencia y calidad las necesidades productivas y sociales del país.</p>
+      </div>
+    </div>
+
+    <div id="cme" class="seccion-id">
+      <h2>Visión CME 2030</h2>
+      <div class="texto-pro">
+        <p>En el año <strong>2030</strong> el Centro de Materiales y Ensayos aporta al desarrollo científico y tecnológico, mediante la ejecución de proyectos, la implementación del modelo de gestión del conocimiento, la formación profesional integral, los servicios tecnológicos, el emprendimiento, la certificación por competencias laborales y la investigación con el fin de contribuir con transparencia y compromiso a sus distintos grupos de valor e interés.</p>
+      </div>
+    </div>
+
+    <div id="historia" class="seccion-id">
+      <h2>Historia del SENA</h2>
+      <div class="texto-pro">
+        <p>Fundado en 1957 por <strong>Rodolfo Martínez Tono</strong>, el SENA nació para brindar formación profesional a trabajadores de la industria, el comercio y el campo. Con una estructura tripartita, busca suplir a las empresas de mano de obra calificada utilizando métodos modernos para transformar la productividad nacional.</p>
+      </div>
+    </div>
+
+    <div id="proyecto" class="seccion-id">
+      <h2>Fundamentación del Proyecto</h2>
+      <div class="texto-pro">
+        <h3>¿Qué es la Emisora Web CME?</h3>
+        <p>Es un canal de comunicación digital dinámico basado en tecnologías de streaming, diseñado exclusivamente para la comunidad del <strong>Centro de Materiales y Ensayos</strong>.</p>
+        <div class="highlight-box">
+          <strong>¿Para qué sirve?</strong><br>
+          Funciona como un puente informativo que conecta a aprendices, instructores y administrativos. Permite la divulgación de avances en investigación, noticias de bienestar y el desarrollo de competencias comunicativas.
+        </div>
+        <h3>Su Fin y Propósito</h3>
+        <p>El fin principal es transformar la comunicación estática en una experiencia viva y accesible, fortaleciendo la identidad institucional.</p>
+      </div>
+    </div>
+
+    <div id="objetivos" class="seccion-id">
+      <h2>Estructura de Objetivos</h2>
+      <div class="texto-pro">
+        <div class="highlight-box">
+          <strong>Objetivo General:</strong><br>
+          Implementar una emisora web institucional en el Centro de Materiales y Ensayos del SENA como un canal digital que fortalezca los procesos de comunicación interna y externa.
+        </div>
+        <ul style="padding-left: 20px;">
+          <li>Diseñar y estructurar la emisora web orientada a contenidos informativos.</li>
+          <li>Promover la participación de la comunidad educativa.</li>
+          <li>Difundir proyectos, eventos y emprendimientos del Centro.</li>
+          <li>Integrar la emisora como medio complementario pedagógico.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function mostrarID(id) {
+  let secciones = document.querySelectorAll('.seccion-id');
+  secciones.forEach(sec => sec.classList.remove('activa-id'));
+  let elemento = document.getElementById(id);
+  if (elemento) {
+    elemento.classList.add('activa-id');
+    setTimeout(() => {
+      elemento.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 50);
+  }
+}
+</script>

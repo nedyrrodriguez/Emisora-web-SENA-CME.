@@ -51,7 +51,7 @@
       default="$(color) none repeat scroll top left"  value="#ebebeb url(https://blogger.googleusercontent.com/img/a/AVvXsEhXpsTZLxU9zZGfQiiDfWwdSpJTdhpYW4AWcUZusO_-RSN61F-DJTLM7KzFNrpMuEaA6-Sth_jCYj7zIthnW56NC8bYcTL687pM07qwg9Ht1Pb0xbPqTXXI5tT_U0Z3WyqDy_w47TF4PtpB5Yt-Bf71jasFGU-rglIlIoRDQs4qFEFoMKvFmIHt64PIVYQ=s1600) repeat scroll bottom center"/>
   <Variable name="body.background.color" description="Body background color"
       type="color"
-      default="#eee"  value="#ffffff"/>
+      default="#eee"  value="#39a900"/>
   <Variable name="posts.background.color" description="Post background color"
       type="color"
       default="#fff"  value="#ffffff"/>
@@ -969,8 +969,25 @@ max-height:$(body.text.font.size * 1.2 + 2 * 8px + 2 * 4px + 4px);
 overflow:hidden;
 position:relative
 }
-.overflow-button{
-cursor:pointer
+/* --- CONTROL DEL BOTÓN MÁS (SOLO CELULAR) --- */
+
+/* 1. Ocultarlo por defecto (en PC no se verá) */
+.overflow-button {
+    display: none !important;
+}
+
+/* 2. Mostrarlo solo cuando la pantalla sea pequeña */
+@media screen and (max-width: 900px) {
+    .overflow-button {
+        display: inline-block !important;
+        background-color: #007832 !important;
+        color: #FFFFFF !important;
+        padding: 15px 12px !important;
+        font-weight: bold !important;
+        margin-left: auto !important;
+        cursor: pointer;
+    }
+}
 }
 #overflowable-dim-overlay{
 background:0 0
@@ -2653,104 +2670,148 @@ width:calc(100% - 50px)
 body.collapsed-header.item-view .centered-top-container .blog-name{
 margin-left:40px
 }
-}
-/* --- ESTILOS DEL MENÚ RADIO SENA --- */
-.tabs-outer, .tabs-inner, #PageList1, .PageList {
-    width: 100% !important;
-    max-width: 100% !important;
-    background-color: #39A900 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: visible !important;
-}
-
-.tabs-inner .widget ul, .PageList ul {
-    display: flex !important;
-    justify-content: center !important;
-    flex-wrap: nowrap !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: #39A900 !important;
-    overflow: visible !important; /* Mata el cuadro de 'más' */
-}
-
-.tabs-inner .widget li, .PageList li {
-    background: transparent !important;
-    border: none !important;
-    display: inline-block !important;
-    float: none !important;
-}
-
-.tabs-inner .widget li a, .PageList li a {
-    color: #FFFFFF !important;
-    font-family: 'Work Sans', sans-serif !important;
-    font-size: 11px !important;
-    font-weight: 700 !important;
-    text-transform: uppercase;
-    padding: 15px 12px !important;
-    white-space: nowrap !important;
-    display: block !important;
-    border: none !important;
-}
-
-.tabs-inner .widget li a:hover, .PageList li a:hover {
-    background-color: #007832 !important;
-}
-
-/*  LIMPIEZA  */
-.overflow-button, .tabs-cap-top, .tabs-cap-bottom, .section#crosscol, .section#crosscol-overflow {
-    display: none !important;
-    height: 0 !important;
-    visibility: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-/* --- FIN DE ESTILOS --- */
-/* --- RESET TOTAL: FONDO BLANCO Y HOJA CENTRADA --- */
-
-/* Fondo de la web totalmente blanco para que no se note la división */
-body, .body-fauxcolumn-outer, .content-fauxcolumn-outer, .fauxcolumn-left-outer {
-    background: #ffffff !important; 
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/* Quitar el espacio de la izquierda que empuja el contenido */
-.column-left-outer, .sidecap-left, .fauxcolumn-left-outer {
-    display: none !important;
-    width: 0 !important;
-}
-
-/* Forzar a que el contenido se centre en el medio de la pantalla */
-.content-outer, .main-outer, .main-inner, .columns-inner {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 100% !important;
-    max-width: 1000px !important; /* Ancho de tu hoja */
-    float: none !important;
-}
-
-/* Asegurar que no haya bordes ni sombras raras fuera de la hoja */
-.content-inner {
-    padding: 0 !important;
-}
-
-/* RESPONSIVE: Que en el celular ocupe todo el ancho sin dejar huecos */
+/* --- 1. SOLO PARA CELULARES (DISEÑO DE FILA + BOTÓN MÁS) --- */
 @media screen and (max-width: 768px) {
-    .content-outer, .main-inner {
-        width: 100% !important;
-        max-width: 100% !important;
+    /* Barra principal */
+    .tabs-inner .widget ul, .PageList ul {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        background: #39A900 !important;
+        padding: 0 !important;
         margin: 0 !important;
-        padding: 10px !important; /* Un poco de aire para el texto */
+        height: auto !important;
+    }
+
+    /* Ocultar todos los botones excepto los primeros para forzar el MÁS */
+    .tabs-inner .widget li, .PageList li {
+        display: none !important;
+    }
+
+    /* Mostramos solo Inicio y En Vivo en la fila principal */
+    .tabs-inner .widget li:nth-child(1), .PageList li:nth-child(1),
+    .tabs-inner .widget li:nth-child(2), .PageList li:nth-child(2) {
+        display: block !important;
+        flex: 1 1 auto !important;
+    }
+
+    /* Estilo del botón MÁS nativo de Blogger */
+    .tabs-inner .widget .overflow-button, .overflow-button {
+        display: block !important;
+        background-color: #007832 !important;
+        color: #FFFFFF !important;
+        padding: 15px 20px !important;
+        font-weight: bold !important;
+        flex: 1 1 auto !important;
+        text-align: center !important;
+    }
+
+    /* El desplegable que sale al tocar MÁS */
+    .overflow-column {
+        width: 100% !important;
+        background: #39A900 !important;
+        position: relative !important;
+        display: none; /* Se abre con el clic de Blogger */
+    }
+
+    .overflow-column li {
+        display: block !important;
+        width: 100% !important;
+        border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+    }
+
+    /* Letras siempre blancas en móvil */
+    .tabs-inner .widget li a, .PageList li a {
+        color: #FFFFFF !important;
+        padding: 15px 10px !important;
+        font-size: 12px !important;
+        display: block !important;
+        text-align: center !important;
     }
 }
 
-/* Limpieza de textos basura */
-.report_abuse, .navbar, .widget-item-control {
+/* --- 2. SOLO PARA PC (NORMAL Y CENTRADO) --- */
+@media screen and (min-width: 769px) {
+    .tabs-inner .widget ul, .PageList ul {
+        display: flex !important;
+        justify-content: center !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        min-height: 50px !important;
+        background: #39A900 !important;
+    }
+
+    .tabs-inner .widget li, .PageList li {
+        display: inline-block !important;
+    }
+
+    .tabs-inner .widget li a, .PageList li a {
+        color: #FFFFFF !important;
+        padding: 15px 20px !important;
+        font-size: 13px !important;
+    }
+
+    /* Esconder el botón MÁS en PC */
+    .overflow-button, .overflow-column {
+        display: none !important;
+    }
+
+    /* Evitar movimiento al seleccionar en PC */
+    .tabs-inner .widget li.selected a, .PageList li.selected a {
+        background-color: #007832 !important;
+        margin: 0 !important;
+    }
+}
+
+/* --- 3. LIMPIEZA GENERAL (AFECTA A AMBOS) --- */
+.tabs-cap-top, .tabs-cap-bottom, .navbar, .report_abuse {
     display: none !important;
+}
+/* --- TRATAMIENTO DE CHOQUE PARA EL MENÚ --- */
+#PageList1, #PageList2, .PageList, .tabs-inner {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+#PageList1 ul, #PageList2 ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    padding: 0px 0 !important;
+    background: #39A900 !important; /* Verde Institucional SENA */
+    border: none !important;
+}
+
+#PageList1 li, #PageList2 li {
+    float: none !important;
+    display: inline-block !important;
+    margin: 5px !important;
+    height: auto !important;
+}
+
+#PageList1 li a, #PageList2 li a {
+    font-family: 'Work Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    color: #FFFFFF !important;
+    padding: 12px 15px !important;
+    display: block !important;
+    line-height: 1.2 !important;
+    text-transform: uppercase !important;
+    background: rgba(0,0,0,0.1) !important; /* Sutil sombra para dar volumen */
+    border-radius: 4px !important;
+}
+
+/* Efecto para resaltar la página donde estás */
+#PageList1 li.selected a, #PageList2 li.selected a,
+#PageList1 li a:hover, #PageList2 li a:hover {
+    background: #007832 !important; /* Verde Oscuro SENA */
+    color: #FFFFFF !important;
+    text-decoration: none !important;
 }
 ]]></b:skin>
 <b:template-skin>
+  
 <![CDATA[
 ]]>
 </b:template-skin>

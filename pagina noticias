@@ -1,0 +1,20 @@
+<p><span style="font-family: Work Sans;">Noticias</span>&nbsp;</p>
+<div style="max-width:900px; margin:auto; font-family:'Work Sans', sans-serif;">
+
+  <div style="background:#F5F5F5; padding:20px; border-radius:10px; margin-bottom:15px; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+    <h3 style="color:#2E7D32;">📢 Lanzamiento de la emisora</h3>
+    <p style="line-height:1.6;">
+      Se da inicio al proyecto de la Radio Web del Centro de Materiales y Ensayos SENA,
+      como una iniciativa innovadora para fortalecer la comunicación digital.
+      <div class="separator" style="clear: both; text-align: center;"><object class="BLOG_video_class" contentid="d1e7f8181d81616a" width="640" height="360" id="BLOG_video-d1e7f8181d81616a" aria-label="Subir video"></object></div>
+  </div>
+
+  <div style="background:#F5F5F5; padding:20px; border-radius:10px; box-shadow:0 2px 5px rgba(0,0,0,0.1);">
+    <h3 style="color:#2E7D32;">🎓 Actividades académicas</h3>
+    <p style="line-height:1.6;">
+      Los aprendices participan en proyectos tecnológicos y de innovación que fortalecen
+      sus competencias en desarrollo de software y medios digitales.
+    </p>
+  </div>
+
+</div>

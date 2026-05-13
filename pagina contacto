@@ -1,0 +1,53 @@
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<div style="max-width:900px; margin:auto; font-family:'Work Sans', sans-serif; padding: 20px; color: #333;">
+
+  <div style="text-align: center; margin-bottom: 40px;">
+    <h2 style="color:#39A900; font-size: 2.2rem; text-transform: uppercase; margin-bottom: 10px;">📩 Contacto y Participación</h2>
+    <div style="background: #00304D; height: 4px; width: 80px; margin: auto; border-radius: 10px;"></div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 30px;">
+    
+    <div style="background:#F9F9F9; padding:25px; border-radius:15px; border-top: 5px solid #00304D; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+      <h2 style="color:#00304D; margin-top: 0;"> Canales Oficiales</h2>
+      <p style="font-size: 0.9rem;">Para consultas administrativas o institucionales:</p>
+      
+      <div style="margin: 15px 0;">
+        <p><strong> Correo:</strong><br> radio.cme.sena@gmail.com</p>
+        <p><strong>📍 Sede:</strong><br> Centro de Materiales y Ensayos</p>
+        <p><strong><div class="separator" style="clear: both;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizENIdOau8MRJ-PwqYHRFk3nIi905xejVGfRZhzTuXn8yb5kJn_43PQbYhk14FhPC1oPep4hVG7cmJgrxV_T2PpRclQ6KhB7wJaoMyZR9wGSoqLPacRDjGXjSK8eL1z_5J13Zjcaw61CUASHgaMzmlCfA_Y9j97WclBCGvU2IEdPaFUQ06dJokCfYCqJw/s612/direcci%C3%B3n.jpg" style="display: block; padding: 1em 0; text-align: center; clear: left; float: left;"><img alt="" border="0" width="25" data-original-height="612" data-original-width="612" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizENIdOau8MRJ-PwqYHRFk3nIi905xejVGfRZhzTuXn8yb5kJn_43PQbYhk14FhPC1oPep4hVG7cmJgrxV_T2PpRclQ6KhB7wJaoMyZR9wGSoqLPacRDjGXjSK8eL1z_5J13Zjcaw61CUASHgaMzmlCfA_Y9j97WclBCGvU2IEdPaFUQ06dJokCfYCqJw/s200/direcci%C3%B3n.jpg"/></a></div>Dirección: Dirección del Centro: Cra 30 # 17b -25 sur, Complejo Sur</p>
+      </div>
+    </div>
+
+    <div style="background:#E8F5E9; padding:25px; border-radius:15px; border-top: 5px solid #39A900; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+      <h2 style="color:#2E7D32; margin-top: 0;"> Tu Voz Cuenta</h2>
+      <p style="line-height:1.6; font-size: 0.95rem;">
+        Si eres aprendiz, instructor o administrativo y tienes una propuesta sonora, utiliza el formulario de abajo para postularte y ser parte de nuestra programación.
+      </p>
+    </div>
+  </div>
+
+ <div id="formulario-participacion" style="background: white; border: 1px solid #eee; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+    <div style="background: #39A900; color: white; padding: 15px; text-align: center;">
+      <h3 style="margin: 0; text-transform: uppercase; font-size: 1.1rem; color: #FFFFFF;">Formulario de Inscripción y Propuestas</h3>
+    </div>
+    
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdJAscEuujRR8UK_nAmhSp21uaB86mIbhIYPqP03A3U5ogS2Q/viewform?embedded=true" 
+      width="100%" 
+      height="800" 
+      frameborder="0" 
+      marginheight="0" 
+      marginwidth="0" 
+      style="border: none;">
+      Cargando…
+    </iframe>
+  </div>
+    
+
+  <div style="margin-top: 30px; text-align: center; color: #888; font-size: 0.85rem;">
+    <p>© 2026 Radio Web CME - Centro de Materiales y Ensayos</p>
+  </div>
+
+</div>
