@@ -75,6 +75,29 @@
 
   /* --- REPRODUCTORES --- */
   .podcast-list { display: none; width: 100%; margin: 20px 0; background: var(--gris-claro); padding: 20px; border-radius: 12px; border-left: 8px solid var(--azul-oscuro); }
+
+  /* =============================================
+     AJUSTES PARA CELULAR (RESPONSIVE)
+     ============================================= */
+  @media (max-width: 600px) {
+    .podcast-container { padding: 10px; margin: 5px; }
+    
+    /* El calendario ahora usa menos espacio */
+    .calendar-grid { gap: 2px; }
+    .calendar-day { padding: 5px; min-height: 45px; font-size: 0.8rem; }
+    .day-name { font-size: 0.65rem; }
+
+    /* Leyenda en dos filas para que no se corte */
+    .calendar-legend { flex-wrap: wrap; justify-content: center; gap: 10px; }
+
+    /* Las tarjetas de eventos ocupan todo el ancho */
+    .programs-grid { grid-template-columns: 1fr; }
+    
+    /* Las categorías se ponen en 2 columnas */
+    .podcast-grid { grid-template-columns: repeat(2, 1fr); }
+    
+    .category-main-title { font-size: 1.5rem; margin: 25px 0 15px; }
+  }
 </style>
 
 <div class="podcast-container">
